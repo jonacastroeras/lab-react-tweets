@@ -32,12 +32,27 @@ const tweetsArray = [
     message:
       "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
   },
+  {
+    user: {
+      name: "Jonathan®",
+      image: "https://i.imgur.com/b0EdHVV.jpg",
+      handle: "dog_feelings",
+    },
+    timestamp: "3h ago",
+    message:
+      "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
+  },
 ];
 
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map(tweet => {
+        return (
+          <Tweet tweet={tweet} />
+        )
+      })
+      }
     </div>
   );
 }
